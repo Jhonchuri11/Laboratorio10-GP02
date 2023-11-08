@@ -6,8 +6,11 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
+import com.tecsup.petclinic.repositories.PetRepository;
 import org.junit.jupiter.api.Test;
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -22,15 +25,15 @@ public class PetServiceTest {
 
 
     @Autowired
-    private PetService petService;
-    
-    
+    private PetService petService ;
 
     @Test
     public void testFindPetById() {
 
+        String NAME_EXPECTED = "Leo";
+
         Integer ID = 1;
-        String NAME = "Leo";
+
         Pet pet = null;
 
         try {
@@ -39,9 +42,9 @@ public class PetServiceTest {
             fail(e.getMessage());
         }
  
-        log.info(pet.toString());
+        //log.info(pet.toString());
         
-        assertEquals(NAME, pet.getName());
+        assertEquals(NAME_EXPECTED, pet.getName());
     }
 
     /**
