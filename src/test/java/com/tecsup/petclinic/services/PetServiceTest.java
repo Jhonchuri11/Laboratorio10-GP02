@@ -26,6 +26,9 @@ public class PetServiceTest {
 
     @Autowired
     private PetService petService ;
+    /**
+     *
+     */
 
     @Test
     public void testFindPetById() {
@@ -42,7 +45,7 @@ public class PetServiceTest {
             fail(e.getMessage());
         }
  
-        //log.info(pet.toString());
+        log.info("" + pet);
         
         assertEquals(NAME_EXPECTED, pet.getName());
     }
@@ -96,7 +99,7 @@ public class PetServiceTest {
     @Test
     public void testCreatePet() {
 
-        String PET_NAME = "Ponky";
+        String PET_NAME = "Ponky2";
         int OWNER_ID = 1;
         int TYPE_ID = 1;
 
@@ -124,9 +127,9 @@ public class PetServiceTest {
         int OWNER_ID = 1;
         int TYPE_ID = 1;
 
-        String UP_PET_NAME = "Bear2";
-        int UP_OWNER_ID = 2;
-        int UP_TYPE_ID = 2;
+        String UP_PET_NAME = "Bear3";
+        int UP_OWNER_ID = 4;
+        int UP_TYPE_ID = 4;
 
         Pet pet = new Pet(PET_NAME, OWNER_ID, TYPE_ID, null);
 
