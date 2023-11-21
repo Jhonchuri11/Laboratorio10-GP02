@@ -52,15 +52,15 @@ public class OwnerServiceTest {
 
 		String FIRST_NAME = "Betty";
 		String LAST_NAME = "Davis";
-		String ADDRESS = "563 Friendly St.";
-		String CITY = "Windsor";
-		String TELEPHONE = "6085553198";
+		String ADDRESS = "638 Cardinal Ave.";
+		String CITY = "Sun Prairie";
+		String TELEPHONE = "6085551749";
 
 		// Parte nuevo owner
-		String UP_FIRST_NAME = "Betty Luz2";
+		String UP_FIRST_NAME = "Betty Luz";
 		String UP_LAST_NAME = "Davis Gonzales";
 		String UP_ADDRESS = "563 Friendly St.";
-		String UP_CITY = "Windsor";
+		String UP_CITY = "Windsor Prueba";
 		String UP_TELEPHONE = "6085553198";
 
 		Owner owner = new Owner(FIRST_NAME,LAST_NAME, ADDRESS, CITY, TELEPHONE);
@@ -90,6 +90,10 @@ public class OwnerServiceTest {
 		assertEquals(UP_CITY, updateOwner.getCity());
 		assertEquals(UP_TELEPHONE, updateOwner.getTelephone());
 	}
+
+	//
+
+
 
 
 }
