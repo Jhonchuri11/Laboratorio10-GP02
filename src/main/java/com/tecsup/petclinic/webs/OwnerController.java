@@ -7,10 +7,7 @@ import com.tecsup.petclinic.mapper.OwnerMapper;
 import com.tecsup.petclinic.services.OwnerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @Slf4j
@@ -70,4 +67,22 @@ public class OwnerController {
     }
 
 
+
+    // Funcionalidad de eliminar
+
+    /**
+     * Delete pet by id
+     *
+     * @param id
+     */
+    @DeleteMapping(value = "/owners/{id}")
+    ResponseEntity<String> delete(@PathVariable int id) {
+
+        try {
+            ownerService.delete(id);
+            return ResponseEntity.ok("Delete ID:" + id);
+        } catch (OwnerNotFoundException e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }

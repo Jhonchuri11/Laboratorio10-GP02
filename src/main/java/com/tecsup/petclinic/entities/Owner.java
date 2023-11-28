@@ -42,11 +42,4 @@ public class Owner {
         this.telephone = telephone;
     }
 
-    public Owner(String first_name, String last_name, String address, String city, String telephone) {
-        this.first_name = first_name;
-        this.last_name = last_name;
-        this.address = address;
-        this.city = city;
-        this.telephone = telephone;
-    }
 }

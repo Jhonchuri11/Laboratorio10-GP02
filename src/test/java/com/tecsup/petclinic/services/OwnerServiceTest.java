@@ -50,6 +50,7 @@ public class OwnerServiceTest {
 	@Test
 	public void testUpdateOwner() {
 
+		int ID = 1;
 		String FIRST_NAME = "Betty";
 		String LAST_NAME = "Davis";
 		String ADDRESS = "638 Cardinal Ave.";
@@ -63,7 +64,7 @@ public class OwnerServiceTest {
 		String UP_CITY = "Windsor Prueba";
 		String UP_TELEPHONE = "6085553198";
 
-		Owner owner = new Owner(FIRST_NAME,LAST_NAME, ADDRESS, CITY, TELEPHONE);
+		Owner owner = new Owner(ID,FIRST_NAME,LAST_NAME, ADDRESS, CITY, TELEPHONE);
 
 		// creacion de nuevo owner
 		log.info(">" + owner);

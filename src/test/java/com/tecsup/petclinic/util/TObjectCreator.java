@@ -1,5 +1,6 @@
 package com.tecsup.petclinic.util;
 
+import com.tecsup.petclinic.entities.Owner;
 import com.tecsup.petclinic.entities.Pet;
 
 import java.util.ArrayList;
@@ -19,6 +20,10 @@ public class TObjectCreator {
 		Pet pet = newPet();
 		pet.setId(1000);
 		return pet;
+	}
+
+	public static Owner NewOwnerForUpate() {
+		return new Owner(1,"George Prueba","Franklin", "110 W. Liberty St.","Madison","6085551023");
 	}
 
 	public static Pet newPetForUpdate() {
